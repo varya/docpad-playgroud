@@ -1,0 +1,8 @@
+<html>
+<head>
+    <title><%= @document.title %> | My Website</title>
+</head>
+<body>
+    <div class="post"><%- @content %></div>
+</body>
+</html>

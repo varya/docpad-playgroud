@@ -1,10 +1,10 @@
 ---
 
-title: Варя Степанова
+title: In English
 
 layout: default
 
 header: Обо мне
 
 ---
-test here
+In english

@@ -40,6 +40,9 @@ events:
                 newOutPath = newOutPath.replace(ownDate[0] + '-', '')
                 newUrl = newUrl.replace(ownDate[0] + '-', '')
 
+            if page.get('old')
+                newUrl = newUrl.replace('/posts/', '/issues/')
+
             page.set('lang', page.get('basename').replace(languageRegex, '$2'))
             page.set('outPath', newOutPath)
             page.setUrl(newUrl)
@@ -48,7 +51,9 @@ events:
         this.docpad.getCollection('ruDocuments').forEach (page) ->
             newOutPath = page.get('outPath')
                 .replace('/out/', '/out/ru/')
-                .replace('_ru.', '.')
+                .replace('_ru', '')
+            if page.get('isPost')
+                newOutPath = newOutPath.replace('.html', '/index.html')
             newUrl = '/ru' + page.get('url')
             page.set('outPath', newOutPath)
             page.setUrl(newUrl)
@@ -61,9 +66,13 @@ events:
                 .replace('_en.', '.')
             if isIndex
                 newOutPath = newOutPath.replace('/en/', '/')
+            else
+                if page.get('isPost')
+                    newOutPath = newOutPath.replace('.html', '/index.html')
+            console.log(newOutPath)
             page.set('outPath', newOutPath)
             urlPrefix = if isIndex then '' else '/en'
-            newUrl = urlPrefix + page.get('url').replace('_en.', '.')
+            newUrl = urlPrefix + page.get('url').replace('_en', '')
             page.setUrl(newUrl)
 
     generated: () ->

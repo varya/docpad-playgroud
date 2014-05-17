@@ -4,6 +4,8 @@
 # Define the DocPad Configuration
 languageRegex = /^(.+?)_(en|ru)$/
 
+fs = require('fs')
+
 docpadConfig = {
 
 collections:
@@ -63,7 +65,24 @@ events:
             urlPrefix = if isIndex then '' else '/en'
             newUrl = urlPrefix + page.get('url').replace('_en.', '.')
             page.setUrl(newUrl)
+
+    generated: () ->
+        link2Old = (targetPath, targetFile, src) ->
+            target = targetPath + '/' + targetFile
+            if !fs.existsSync(targetPath)
+                fs.mkdirSync(targetPath)
+            if fs.existsSync(target)
+                fs.unlinkSync(target)
+            fs.linkSync(src, target)
+
+        link2Old('./out/en/issues', 'index.html', './out/en/issues.html')
+        link2Old('./out/ru/issues', 'index.html', './out/ru/issues.html')
+        link2Old('./out/en/content', 'index.html', './out/en/content.html')
+        link2Old('./out/ru/content', 'index.html', './out/ru/content.html')
+
 }
+
+
 
 # Export the DocPad Configuration
 module.exports = docpadConfig

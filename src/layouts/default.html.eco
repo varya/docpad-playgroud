@@ -3,6 +3,7 @@
     <title><%= @document.title %> | My Website</title>
 </head>
 <body>
+<%= @translationUrl() %>
 <ul>
     <% for page in @getCollection("documents").findAll({isPage:true, lang: @document.lang},[{order: 1}]).toJSON(): %>
         <li class="<%= if page.id is @document.id then 'active' else 'inactive' %>">

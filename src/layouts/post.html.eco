@@ -3,6 +3,7 @@
     <title><%= @document.title %> | My Website</title>
 </head>
 <body>
+    <%= @translationUrl() %>
     <div class="post"><%- @content %></div>
 </body>
 </html>

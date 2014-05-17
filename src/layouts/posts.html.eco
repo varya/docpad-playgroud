@@ -3,6 +3,7 @@
     <title><%= @document.title %> | My Website</title>
 </head>
 <body>
+<%= @translationUrl() %>
 List of posts
 <ul>
     <% for post in @getCollection("documents").findAll({isPost: true,lang: @document.lang}, [{date:-1}]).toJSON(): %>

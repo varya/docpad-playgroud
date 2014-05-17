@@ -3,10 +3,34 @@
 
 # Define the DocPad Configuration
 languageRegex = /^(.+?)_(en|ru)$/
+langBase = {
+    'ru' : 'en',
+    'en' : 'ru'
+    }
 
 fs = require('fs')
+glob = require("glob")
 
 docpadConfig = {
+
+templateData:
+
+    translationUrl: ->
+
+        replaceLang = (str, lang) ->
+            str.replace('/' + lang + '/', '/' + langBase[lang] + '/')
+
+        p = @document.relativePath
+            .replace(/\d{4}-\d{2}-\d{2}-/, '*')
+            .replace('_' + @document.lang, '_' + langBase[@document.lang])
+        hasTranslation = glob.sync('src/documents/'+ p).length
+
+        if @document.basename == "index_en"
+            return "/ru/"
+        if @document.basename == "index_ru"
+            return "/"
+        if hasTranslation
+            return replaceLang(@document.url, @document.lang)
 
 collections:
     translate: (database) ->

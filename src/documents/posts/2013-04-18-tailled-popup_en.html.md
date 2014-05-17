@@ -3,6 +3,7 @@
 title: Tailled popup in CSS
 
 categories: en issues
+old: true
 
 layout: post
 

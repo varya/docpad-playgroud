@@ -1,9 +1,8 @@
 ---
 
-title: Switching to bem-core#v2
+title: New post in English
 
 categories: en issues
-old: true
 
 layout: post
 

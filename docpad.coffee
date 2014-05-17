@@ -2,6 +2,8 @@
 # http://docpad.org/docs/config
 
 # Define the DocPad Configuration
+languageRegex = /^(.+?)_(en|ru)$/
+
 docpadConfig = {
 
 collections:
@@ -21,6 +23,8 @@ events:
         this.docpad.getCollection('documents').forEach (page) ->
             newOutPath = page.get('outPath').replace('/out/pages/', '/out/')
             newUrl = page.get('url').replace('pages/', '')
+            page.set('isPage', true)
+            page.set('lang', page.get('basename').replace(languageRegex, '$2'))
             page.set('outPath', newOutPath)
             page.setUrl(newUrl)
 

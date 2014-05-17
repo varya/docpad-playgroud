@@ -75,8 +75,8 @@ events:
                 fs.unlinkSync(target)
             fs.linkSync(src, target)
 
-        link2Old('./out/en/issues', 'index.html', './out/en/issues.html')
-        link2Old('./out/ru/issues', 'index.html', './out/ru/issues.html')
+        link2Old('./out/en/issues', 'index.html', './out/en/posts.html')
+        link2Old('./out/ru/issues', 'index.html', './out/ru/posts.html')
         link2Old('./out/en/content', 'index.html', './out/en/content.html')
         link2Old('./out/ru/content', 'index.html', './out/ru/content.html')
 

@@ -1,6 +1,6 @@
 ---
 
-layout: default
+layout: posts
 
 title: List of issues
 

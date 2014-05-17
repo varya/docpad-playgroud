@@ -2,6 +2,8 @@
 layout: default
 title: Varvara Stepanova
 header: About me
+
+order: 1
 ---
 {% include setup.md %}
 

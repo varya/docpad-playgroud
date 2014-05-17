@@ -4,6 +4,7 @@ layout: default
 
 title: List of issues
 
+order: 2
 ---
 
 The issues here are some reflections of my job, recently discussed topics as

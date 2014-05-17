@@ -4,7 +4,7 @@
 </head>
 <body>
 <ul>
-    <% for page in @getCollection("documents").findAll({isPage:true, lang: @document.lang}).toJSON(): %>
+    <% for page in @getCollection("documents").findAll({isPage:true, lang: @document.lang},[{order: 1}]).toJSON(): %>
         <li class="<%= if page.id is @document.id then 'active' else 'inactive' %>">
             <a href="<%= page.url %>">
                 <%= page.title %>

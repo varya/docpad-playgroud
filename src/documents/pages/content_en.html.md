@@ -4,6 +4,7 @@ layout: default
 
 title: Articles and talks
 
+order: 3
 ---
 
  * [Tutorial on JavaScript components with

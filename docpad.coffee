@@ -39,11 +39,15 @@ events:
 
         # Rewrite `_en` to the `/en/`
         this.docpad.getCollection('enDocuments').forEach (page) ->
+            isIndex = page.get('basename').match(/^index_/)
             newOutPath = page.get('outPath')
                 .replace('/out/', '/out/en/')
                 .replace('_en.', '.')
+            if isIndex
+                newOutPath = newOutPath.replace('/en/', '/')
             page.set('outPath', newOutPath)
-            newUrl = '/en' + page.get('url').replace('_en.', '.')
+            urlPrefix = if isIndex then '' else '/en'
+            newUrl = urlPrefix + page.get('url').replace('_en.', '.')
             page.setUrl(newUrl)
 }
 

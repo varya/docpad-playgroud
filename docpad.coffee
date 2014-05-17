@@ -21,9 +21,16 @@ events:
     renderBefore: () ->
         # Rewrite `pages/` to the root.
         this.docpad.getCollection('documents').forEach (page) ->
+            if page.get('outPath').indexOf('/pages/') != -1
+                page.set('isPage', true)
+            if page.get('outPath').indexOf('/posts/') != -1
+                page.set('isPost', true)
+                ownDate = page.get('basename').match(/^(\d{4})-(\d{2})-(\d{2})/)
+                if (ownDate)
+                    page.setMeta('date', new Date(ownDate[1], ownDate[2], ownDate[3]))
+
             newOutPath = page.get('outPath').replace('/out/pages/', '/out/')
             newUrl = page.get('url').replace('pages/', '')
-            page.set('isPage', true)
             page.set('lang', page.get('basename').replace(languageRegex, '$2'))
             page.set('outPath', newOutPath)
             page.setUrl(newUrl)

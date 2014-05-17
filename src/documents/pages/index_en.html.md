@@ -1,39 +1,41 @@
 ---
-
-title: Варя Степанова333
-
 layout: default
-
-header: Обо мне
-
+title: Varvara Stepanova
+header: About me
 ---
+{% include setup.md %}
 
-Я разработчик интерфейсов (фронтендер) из
-[Петрозаводска](http://maps.yandex.ru/-/CVR3n8za)
-(Карелия); сейчас живу в Амстердаме, работаю в TMG Online.<br/>
-До этого я 5 лет жила в Москве и работала в
-[Яндексе](http://company.yandex.ru/).<br/>
+I am a front-end developer originally from the Utmost North
+([Petrozavodsk](http://maps.yandex.com/-/CVR3nIPf),
+Karelia); currently living in Amsterdam and working for
+TMG Online.<br/>
+Before, I had been living in
+[Moscow](http://images.yandex.com/yandsearch?text=Moscow), Russia for 5 years
+and working for
+[Yandex](http://www.yandex.com/).<br/>
+According to official papers, my name is `Varvara Stepanova`, although most people just call me `Varya`.
 
-Больше 4х лет я в команде [БЭМ](http://bem.info/).
-Мы выносим в open source полный стек технологических решений общепортального
-интерфейсного фреймворка Яндекса. Как внешний разработчик БЭМ, я применяю
-эти решения в своей работе и личных проектах.
+More than 4 years I am a member of
+the [BEM](http://bem.info/) team.
+Our mission is to open source the full technological stack that powers the Yandex UI framework.
+Being a remote BEM developer I use the solutions in my current work and personal
+projects.
 
-Я занимаюсь разработкой библиотек блоков, инструментов и, кроме того, часто
-выступаю на технических конференциях, представляя БЭМ. Я пишу статьи на русском
-и английском, а также туториалы и обучающие проекты, чтобы помогать людям
-разобраться с БЭМ и впустить его в свою жизнь.
-Кое что из этого вы можете найти на странице [статьи и презентации](content/).
+Besides the actual development of components, libraries and tools, I frequently speak at tech
+conferences, usually explaining the BEM methodology. I write articles in English and Russian, as well as
+tutorials and training projects to help developers perform their first dive into
+BEM.
+There are some links on the [content](en/content/) page for your browsing pleasure.
 
-Я люблю путешествовать и мечтаю о друзьях со всего света. Также вам стоит знать,
-что я люблю котиков (в том числе и очень больших).
+I am keen on traveling and dream of having friends all over the world.
+If you're interested, here's the first personal thing to learn about me: I am passionate about cats, all of them (lions included).
 
-Здесь на этом сайте вы можете найти мои заметки, статьи, ссылки на проекты и
-презентации.
+On this site I publish my day-to-day writings as well as links to
+articles, projects and presentations.
 
-Сайт доступен как на русском, так и [на английском](/).
+This site is available in both English and [Russian](/ru).
 
-И, традиционный список ссылочек:
+Here are some obligatory (but useful) links as well:
 
  * [Github](https://github.com/varya)
  * [Twitter](https://twitter.com/toivonens)

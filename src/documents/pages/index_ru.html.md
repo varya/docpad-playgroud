@@ -1,6 +1,6 @@
 ---
 
-title: Варя Степанова111
+title: Варя Степанова
 
 layout: default
 

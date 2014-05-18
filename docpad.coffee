@@ -90,6 +90,7 @@ collections:
 
         link2Old('./out/en/issues', 'index.html', './out/en/posts/index.html')
         link2Old('./out/ru/issues', 'index.html', './out/ru/posts/index.html')
+        link2Old('./out/ru/issues/bem-tools-1.0.0-alpha', 'index.html', './out/ru/issues/bem-tools-100-alpha/index.html')
 }
 
 

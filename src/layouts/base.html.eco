@@ -1,8 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html class="page page_<%= @document.lang %>">
 <head>
-    <title><%= @document.title %> | My Website</title>
+    <meta charset="utf-8"/>
+    <title><%= @document.title %></title>
+    <%- @getBlock('styles').add(['/desktop.bundles/index/index.min.css']).toHTML() %>
 </head>
-<body>
+<body class="page page__body">
 Base layout here
 <%- @content %>
 </body>

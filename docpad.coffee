@@ -13,6 +13,11 @@ glob = require("glob")
 
 docpadConfig = {
 
+plugins:
+    grunt:
+        writeAfter: false
+        generateAfter: ["copy"]
+
 templateData:
 
     translationUrl: ->

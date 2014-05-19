@@ -1,8 +1,6 @@
-<html>
-<head>
-    <title><%= @document.title %> | My Website</title>
-</head>
-<body>
+---
+layout: base
+---
 <%= @translationUrl() %>
 List of posts
 <ul>
@@ -14,5 +12,3 @@ List of posts
         </li>
     <% end %>
 </ul>
-</body>
-</html>

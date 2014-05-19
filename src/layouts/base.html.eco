@@ -1,0 +1,9 @@
+<html>
+<head>
+    <title><%= @document.title %> | My Website</title>
+</head>
+<body>
+Base layout here
+<%- @content %>
+</body>
+</html>

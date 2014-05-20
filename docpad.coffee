@@ -3,6 +3,10 @@
 
 # Define the DocPad Configuration
 languageRegex = /^(.+?)_(en|ru)$/
+langs = [
+    'en'
+    'ru'
+]
 langBase = {
     'ru' : 'en',
     'en' : 'ru'
@@ -19,6 +23,12 @@ plugins:
         generateAfter: ["copy"]
 
 templateData:
+
+    site:
+        langs: [
+            'en',
+            'ru'
+        ]
 
     translationUrl: ->
 

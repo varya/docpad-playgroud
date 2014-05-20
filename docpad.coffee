@@ -30,6 +30,17 @@ templateData:
             'ru'
         ]
 
+    i18n: (phrase) ->
+
+        words =
+            'On this site' :
+                ru: 'На этом сайте'
+
+        if !words[phrase]
+            return phrase
+
+        return words[phrase][@document.lang] || phrase
+
     translationUrl: ->
 
         replaceLang = (str, lang) ->

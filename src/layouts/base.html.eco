@@ -31,6 +31,18 @@
             <%- @content %>
         </section>
         <nav class="sidebar">
+        <ul class="menu-vert">
+            <h3 class="menu-vert__title box__title">
+                <%= @i18n('On this site') %>
+            </h3>
+            <% for page in @getCollection("documents").findAll({isPage:true, lang: @document.lang},[{order: 1}]).toJSON(): %>
+                <li class="menu-vert__item <%= if page.id is @document.id then 'menu-vert__item_active' %>">
+                    <a class="link" href="<%= page.url %>">
+                        <%= page.title %>
+                    </a>
+                </li>
+            <% end %>
+            </ul>
             <div class="github i-bem"
                 data-bem='{ "github" : { "user" : "varya" } }'>
                 <div class="github__header"></div>

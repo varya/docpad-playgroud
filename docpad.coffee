@@ -21,8 +21,15 @@ plugins:
     grunt:
         writeAfter: false
         generateAfter: ["copy"]
+    moment:
+        formats: [
+            {raw: 'date', format: 'MMMM Do YYYY', formatted: 'humanDate'}
+            {raw: 'date', format: 'YYYY-MM-DD', formatted: 'computerDate'}
+        ]
 
 templateData:
+
+    cutTag: '<excerpt/>'
 
     site:
         langs: [
@@ -67,6 +74,18 @@ templateData:
             return "/"
         if hasTranslation
             return replaceLang(@document.url, @document.lang)
+
+    # Post part before “cut”
+    cuttedContent: (content) ->
+        if @hasReadMore content
+            cutIdx = content.search @cutTag
+            content[0..cutIdx-1]
+        else
+            content
+
+    # Has “cut”?
+    hasReadMore: (content) ->
+        content and ((content.search @cutTag) isnt -1)
 
 collections:
     translate: (database) ->

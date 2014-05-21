@@ -3,7 +3,12 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         copy: {
-            main: {
+            blocks: {
+                files: {
+                    "out/": ["desktop.blocks/**/*"]
+                }
+            },
+            bundles: {
                 files: {
                     "out/": ["desktop.bundles/index/*"]
                 }

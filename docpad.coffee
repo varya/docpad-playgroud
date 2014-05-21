@@ -29,6 +29,9 @@ templateData:
             'en',
             'ru'
         ]
+        twitter:
+            en: 'varya_en'
+            ru: 'toivonens'
 
     i18n: (phrase) ->
 

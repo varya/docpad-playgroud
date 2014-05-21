@@ -61,6 +61,13 @@ templateData:
                 ru: 'Опубликовано'
             'Comments':
                 ru: 'Обсуждение'
+            'By the way':
+                ru: 'Кстати'
+            'Create a GitHub issue for me':
+                ru: 'Создайте для меня issue на GitHub'
+            "if you've spotted":
+                en: " if you've spotted a typo or a mistake, or wish to add something on"
+                ru: ', если вы заметили ошибку или хотите дополнить статью'
 
         if !words[phrase]
             return phrase

@@ -12,6 +12,11 @@ module.exports = function(grunt) {
                 files: {
                     "out/": ["desktop.bundles/index/*"]
                 }
+            },
+            data: {
+                files: {
+                    "out/": ["data/*"]
+                }
             }
         }
     });

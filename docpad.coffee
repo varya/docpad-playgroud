@@ -50,8 +50,12 @@ templateData:
     i18n: (phrase) ->
 
         words =
-            'On this site' :
+            'On this site':
                 ru: 'На этом сайте'
+            'Follow me on twitter':
+                ru: 'Читайте меня в Твиттере'
+            'Published on':
+                ru: 'Опубликовано'
 
         if !words[phrase]
             return phrase

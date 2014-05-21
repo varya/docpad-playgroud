@@ -1,9 +1,23 @@
-<html>
-<head>
-    <title><%= @document.title %> | My Website</title>
-</head>
-<body>
-    <%= @translationUrl() %>
-    <div class="post"><%- @content %></div>
-</body>
-</html>
+---
+layout: base
+---
+<div class="article" role="main">
+    <div class="article__body box__body">
+        <h1 class="article__header">
+            <%- @document.title %>
+        </h1>
+    </div>
+    <div class="article__text box__island">
+        <script type="text/javascript" src="//yandex.st/share/share.js"
+        charset="utf-8"></script>
+        <div class="share yashare-auto-init" data-yashareL10n="{{ lang }}"
+            data-yashareQuickServices="twitter,facebook,gplus<%- ',vkontakte' if @document.lang == 'ru' %>" data-yashareTheme="counter"
+        ></div>
+        <span class="article__details author vcard">
+            <%- @i18n('Published on') %>
+            <%= @moment(@document.date).format('Do MMMM YYYY') %>
+
+        </span>
+        <%- @content %>
+    </div>
+</div>

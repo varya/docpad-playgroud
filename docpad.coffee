@@ -40,12 +40,15 @@ templateData:
             en: 'varya_en'
             ru: 'toivonens'
         github: 'varya'
-        url:
+        siteRoot:
             en: 'http://varya.me/'
             ru: 'http://varya.me/ru/'
+        url: 'http://varya.me/'
         name:
             en: 'Varya Stepanova'
             ru: 'Варя Степанова'
+        services:
+            disqus: 'varya'
 
     i18n: (phrase) ->
 
@@ -56,6 +59,8 @@ templateData:
                 ru: 'Читайте меня в Твиттере'
             'Published on':
                 ru: 'Опубликовано'
+            'Comments':
+                ru: 'Обсуждение'
 
         if !words[phrase]
             return phrase

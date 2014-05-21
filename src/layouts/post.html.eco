@@ -16,8 +16,17 @@ layout: base
         <span class="article__details author vcard">
             <%- @i18n('Published on') %>
             <%= @moment(@document.date).format('Do MMMM YYYY') %>
-
         </span>
         <%- @content %>
+    </div>
+    <div class="comments">
+        <div class="comments__box box__body">
+            <h4 class="comments__header">
+                <%- @i18n('Comments') %>
+            </h4>
+        </div>
+        <div class="comments__body box__island">
+            <%- @getDisqus() %>
+        </div>
     </div>
 </div>

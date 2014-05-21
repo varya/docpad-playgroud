@@ -85,7 +85,7 @@
             <div class="footer__left">
             </div>
             <div class="footer__center">
-                <a class="link  link_text  link_wrapper" href="<%- @site.url[@document.lang] %>">
+                <a class="link  link_text  link_wrapper" href="<%- @site.siteRoot[@document.lang] %>">
                     © <%- @site.date.getFullYear() %>
                     <span class="link__inner"><%- @site.name[@document.lang] %></span>.
                 </a>

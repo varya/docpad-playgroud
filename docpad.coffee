@@ -32,6 +32,12 @@ templateData:
         twitter:
             en: 'varya_en'
             ru: 'toivonens'
+        url:
+            en: 'http://varya.me/'
+            ru: 'http://varya.me/ru/'
+        name:
+            en: 'Varya Stepanova'
+            ru: 'Варя Степанова'
 
     i18n: (phrase) ->
 

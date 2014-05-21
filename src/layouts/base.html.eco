@@ -44,7 +44,7 @@
             <% end %>
             </ul>
             <div class="github i-bem"
-                data-bem='{ "github" : { "user" : "varya" } }'>
+                data-bem='{ "github" : { "user" : "<%- @site.github %>" } }'>
                 <div class="github__header"></div>
                 <div class="github__body"></div>
             </div>
@@ -69,7 +69,7 @@
                     target="_blank"></a>
                 </li>
                 <li class="menu-vert__item">
-                    <a class="link social-ico__ico social-ico__ico_type_github" href="https://github.com/varya" target="_blank"></a>
+                    <a class="link social-ico__ico social-ico__ico_type_github" href="https://github.com/<%- @site.github %>" target="_blank"></a>
                 </li>
                 <li class="menu-vert__item">
                     <a class="link social-ico__ico social-ico__ico_type_facebook" href="http://www.facebook.com/varvara.stepanova.9" target="_blank"></a>

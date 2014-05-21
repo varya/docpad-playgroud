@@ -32,6 +32,7 @@ templateData:
         twitter:
             en: 'varya_en'
             ru: 'toivonens'
+        github: 'varya'
         url:
             en: 'http://varya.me/'
             ru: 'http://varya.me/ru/'

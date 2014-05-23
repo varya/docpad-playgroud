@@ -1,10 +1,10 @@
 ---
 
-layout: default
+layout: page
 
 title: Articles and talks
 
-order: 3
+order: 2
 ---
 
  * [Tutorial on JavaScript components with

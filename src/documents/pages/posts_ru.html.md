@@ -2,7 +2,7 @@
 
 layout: posts
 
-title: Список заметок
+title: Блог
 
-order: 2
+order: 1
 ---

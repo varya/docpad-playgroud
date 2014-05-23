@@ -117,6 +117,8 @@ collections:
 
             document.set('lang', language)
 
+            document.set('htmlTitle', document.get('htmlTitle') || document.get('title'))
+
             if outPath.indexOf('/pages/') != -1
                 document.set('isPage', true)
                 newOutPath = outPath

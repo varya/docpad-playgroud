@@ -1,10 +1,10 @@
 ---
 
-layout: default
+layout: page
 
 title: Статьи и презентации
 
-order: 3
+order: 2
 ---
 
  * [Пошаговое руководство по

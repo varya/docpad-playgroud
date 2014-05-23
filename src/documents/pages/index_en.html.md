@@ -1,9 +1,9 @@
 ---
 layout: index
-title: Varvara Stepanova
-header: About me
+htmlTitle: Varya Stepanova
+title: About me
 
-order: 1
+order: 3
 ---
 I am a front-end developer originally from the Utmost North
 ([Petrozavodsk](http://maps.yandex.com/-/CVR3nIPf),

@@ -2,7 +2,7 @@
 <html class="page page_<%= @document.lang %>">
 <head>
     <meta charset="utf-8"/>
-    <title><%= @document.title %></title>
+    <title><%= @document.htmlTitle %></title>
     <%- @getBlock('styles').add(['/desktop.bundles/index/index.min.css']).toHTML() %>
 </head>
 <body class="page page__body">

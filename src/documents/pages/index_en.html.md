@@ -1,12 +1,10 @@
 ---
-layout: default
+layout: index
 title: Varvara Stepanova
 header: About me
 
 order: 1
 ---
-{% include setup.md %}
-
 I am a front-end developer originally from the Utmost North
 ([Petrozavodsk](http://maps.yandex.com/-/CVR3nIPf),
 Karelia); currently living in Amsterdam and working for

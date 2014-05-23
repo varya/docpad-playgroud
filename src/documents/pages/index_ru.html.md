@@ -2,7 +2,7 @@
 
 title: Варя Степанова
 
-layout: default
+layout: index
 
 header: Обо мне
 

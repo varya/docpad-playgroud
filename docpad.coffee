@@ -68,6 +68,8 @@ templateData:
             "if you've spotted":
                 en: " if you've spotted a typo or a mistake, or wish to add something on"
                 ru: ', если вы заметили ошибку или хотите дополнить статью'
+            'Recently in the blog':
+                ru: 'Недавние заметки'
 
         if !words[phrase]
             return phrase

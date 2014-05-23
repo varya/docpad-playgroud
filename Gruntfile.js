@@ -2,6 +2,15 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        bem: {
+            options: {
+                require: './node_modules/bem',
+                root: './'
+            },
+            bundles: {
+                targets: 'desktop.bundles'
+            }
+        },
         copy: {
             blocks: {
                 files: {
@@ -22,5 +31,6 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-bem');
 
 }
